@@ -266,7 +266,7 @@ defmodule Romeo.Stanza do
     password = Keyword.get(opts, :password)
 
     password = if password, do: [muc_password(password)], else: []
-    history = if history, do: [history(history)], else: [history(maxstanzas: 1)]
+    history = if history, do: [history(history)], else: []
 
     children = history ++ password
 
